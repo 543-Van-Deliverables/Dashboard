@@ -1,29 +1,67 @@
 ---
-title: "index"
-output: html_document
-date: "2023-03-04"
+title: "Dashboards for PUBPOL 543"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+library(flexdashboard)
 ```
 
-## R Markdown
+[comment]: # two plot here with fade effect
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Row {.tabset .tabset-fade}
+-----------------------------------------------------------------------
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+### Life Expectancy Box Plot
 
-```{r cars}
-summary(cars)
+```{r}
+readRDS("WorldLifeExpectancyBP.rds")
 ```
 
-## Including Plots
+### Life Expectancy Histogram
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+readRDS("WorldLifeExpectancy.rds")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+[comment]: # two plot here
+
+Row {.tabset .tabset-fade}
+-----------------------------------------------------------------------
+
+### Female Fertility Rates Box Plot
+
+```{r}
+readRDS("WomenFertilityRatesWorldWideBP.rds")
+```
+
+### Female Fertility Rates Histogram
+
+```{r}
+readRDS("WomenFertilityRatesWorldWide.rds")
+```
+
+[comment]: # Three maps here
+
+Row 
+-----------------------------------------------------------------------
+
+### Carbpm Dioxide Emissions Map
+
+```{r}
+readRDS("CDEmissionsbyCountry.rds")
+```
+
+### Industrial Production Growth Map
+
+```{r}
+readRDS("IPGrowthbyCountry.rds")
+```
+
+### Labor Force Map
+
+```{r}
+readRDS("LFbyCountry.rds")
+```
