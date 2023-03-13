@@ -11,6 +11,9 @@ library(flexdashboard)
 
 [comment]: # two plot here with fade effect
 
+Life Expectancy Rates 
+=====================================
+
 Row {.tabset .tabset-fade}
 -----------------------------------------------------------------------
 
@@ -27,6 +30,9 @@ readRDS("WorldLifeExpectancy.rds")
 ```
 
 [comment]: # two plot here
+
+Women's Fertility Rates by Continent
+=====================================
 
 Row {.tabset .tabset-fade}
 -----------------------------------------------------------------------
@@ -45,7 +51,10 @@ readRDS("WomenFertilityRatesWorldWide.rds")
 
 [comment]: # Three maps here
 
-Row 
+Various Worldwide Metrics
+=====================================
+
+Row {.tabset .tabset-fade}
 -----------------------------------------------------------------------
 
 ### Carbpm Dioxide Emissions Map
